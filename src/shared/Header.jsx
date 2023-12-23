@@ -1,14 +1,55 @@
-import React from 'react';
-import logo from "../assets/logo.png"
+import React from "react";
+import logo from "../assets/logo.png";
+import user from "../assets/user.png";
+import moment from "moment";
+import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-    return (
-        <div>
-            <div className="mx-auto w-fit ">
-                <img src={logo} alt="" className=' '/>
-            </div>
+  return (
+    <div>
+      <div className="mx-auto w-fit text-center mt-5">
+        <img src={logo} alt="" className="w-96 ml-6" />
+        <h2>
+          <small className="font-">Journalism Without Fear or Favour</small>
+        </h2>
+        <h2>
+          <small className="text-center font-normal">
+            {moment().format("dddd, MMMM D ,YYYY")}
+          </small>
+        </h2>
+      </div>
+
+      {/* marqueee */}
+      <div className="flex  bg-slate-400 items-center justify-center p-2 rounded-2xl">
+        <button className="btn btn-warning mr-2 ml-3">Latest</button>
+        <span>
+          {" "}
+          <Marquee className="p-3">
+            Match Highlights: Germany vs Spain — as it happened ! Match
+            Highlights: Germany vs Spain as...
+          </Marquee>
+        </span>
+      </div>
+      {/* end */}
+      {/* header */}
+      <div className="navbar bg-base-100">
+        <div className=""></div>
+        <div className="gap-4">
+          <Link className="no-underline">Home</Link>
+          <Link className="no-underline">About</Link>
+          <Link className="no-underline"> Career</Link>
         </div>
-    );
+        
+        <div className="gap-4">
+            <img src={user} alt="" className="w-12"/>
+          <button className="btn btn-primary px-3 text-xs">Login</button>
+        </div>
+      </div>
+
+      {/* header */}
+    </div>
+  );
 };
 
 export default Header;
