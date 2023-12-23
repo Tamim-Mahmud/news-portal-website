@@ -21,7 +21,7 @@ const Header = () => {
       </div>
 
       {/* marqueee */}
-      <div className="flex  bg-slate-400 items-center justify-center p-2 rounded-2xl">
+      <div className="flex mt-5 bg-slate-400 items-center justify-center p-2 rounded-2xl">
         <button className="btn btn-warning mr-2 ml-3">Latest</button>
         <span>
           {" "}
@@ -33,9 +33,9 @@ const Header = () => {
       </div>
       {/* end */}
       {/* header */}
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 justify-between">
         <div className=""></div>
-        <div className="gap-4">
+        <div className="gap-4 ml-40">
           <Link className="no-underline">Home</Link>
           <Link className="no-underline">About</Link>
           <Link className="no-underline"> Career</Link>
@@ -43,7 +43,7 @@ const Header = () => {
         
         <div className="gap-4">
             <img src={user} alt="" className="w-12"/>
-          <button className="btn btn-primary px-3 text-xs">Login</button>
+          <button className="btn btn-primary px-6 text-white text-xs">Login</button>
         </div>
       </div>
 
