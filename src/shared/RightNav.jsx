@@ -22,7 +22,7 @@ const RightNav = () => {
       </div>
       <div className="mt-3">
         <h2 className="text-xl mb-3 font-semibold">Find us on</h2>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-y-2">
           <button className="btn btn-outline btn-primary text-white">
             <ImFacebook2 />
             Facebook

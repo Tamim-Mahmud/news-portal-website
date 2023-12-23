@@ -4,21 +4,17 @@ import Footer from "../shared/Footer";
 import LeftNav from "../shared/LeftNav";
 import RightNav from "../shared/RightNav";
 
-
-
-
 import { Outlet } from "react-router-dom";
 
-const Main = () => {
+import NewsDetails from "../pages/NewsDetails";
+
+const News = () => {
   return (
     <div className="max-w-7xl mx-auto">
       <Header />
 
       <div className="grid grid-cols-4">
-        <div className="col-span-1">
-          <LeftNav />
-        </div>
-        <div className="col-span-2">
+        <div className="col-span-3">
           <Outlet />
         </div>
         <div className="col-span-1">
@@ -30,4 +26,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default News;
