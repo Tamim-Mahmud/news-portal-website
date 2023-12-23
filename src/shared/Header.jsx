@@ -11,10 +11,10 @@ const Header = () => {
       <div className="mx-auto w-fit text-center mt-5">
         <img src={logo} alt="" className="w-96 ml-6" />
         <h2>
-          <small className="font-">Journalism Without Fear or Favour</small>
+          <small className="text-sm">Journalism Without Fear or Favour</small>
         </h2>
         <h2>
-          <small className="text-center font-normal">
+          <small className="text-center text-lg">
             {moment().format("dddd, MMMM D ,YYYY")}
           </small>
         </h2>
