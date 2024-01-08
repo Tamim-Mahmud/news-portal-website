@@ -45,7 +45,7 @@ const NewsCart = ({ news }) => {
             ) : (
               <p>
                 {details.slice(0, 250)} ....{" "}
-                <Link to={`/news/:${_id}`} className="text-blue-600">
+                <Link to={`/news/${_id}`} className="text-blue-600">
                   Read more
                 </Link>
               </p>
