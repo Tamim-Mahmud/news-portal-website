@@ -36,7 +36,7 @@ const Header = () => {
       <div className="navbar bg-base-100 justify-between">
         <div className=""></div>
         <div className="gap-4 ml-40">
-          <Link className="no-underline">Home</Link>
+          <Link className="no-underline" to="/">Home</Link>
           <Link className="no-underline">About</Link>
           <Link className="no-underline"> Career</Link>
         </div>

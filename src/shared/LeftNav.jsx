@@ -24,8 +24,8 @@ const LeftNav = () => {
     
     // console.log(tempTodaysPick);
     return (
-        <div className="bg-slate-200 p-5">
-            <h2 className="text-lg">All Categories</h2>
+        <div className="p-5">
+             <h2 className=" p-3 bg-slate-600 text-white rounded-lg">All Catagories</h2>
             <div className="ml-5 mt-3">
                 {
                     categories.map(category => <p className="mt-2" key={category.id}>
@@ -33,9 +33,11 @@ const LeftNav = () => {
                     </p> )
                 }
             </div>
+            <h2 className=" p-3 bg-slate-600 text-white rounded-lg mt-5">Todays Pick</h2>
             <div className="">
-                <TodaysPick data = {tempTodaysPick}></TodaysPick>
+                {tempTodaysPick.map((pick) => <TodaysPick key={pick._id} data = {pick}></TodaysPick>)}
             </div>
+           
         </div>
     );
 };
