@@ -8,6 +8,9 @@ import Home from "../pages/Home";
 
 import Category from "../pages/Utilities/Category";
 import NewsDetails from "../pages/NewsDetails";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import LoginOut from "../layout/LoginOut";
 
 const router = createBrowserRouter([
   {
@@ -18,18 +21,21 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      
       {
         path: "category/:id",
         element: <Category />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/category/${params.id}`),
       },
+      
     ],
   },
   {
     path: "/news",
     element: <News />,
     children: [
+      
       {
          path: "/news/:id",
         element: <NewsDetails /> ,
@@ -38,6 +44,18 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path : '/login',
+    element: <Login />,
+    
+  },
+  {
+    path : '/register',
+    element: <Register />,
+    
+  }
+  
+  
 ]);
 
 export default router;

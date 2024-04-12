@@ -19,7 +19,7 @@ const TodaysPick = ({ data }) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="">{title}... <Link className="hover:text-blue-700" to={`news/:${_id}`}>Read More</Link></h2>
+          <h2 className="">{title}... <Link className="hover:text-blue-700" to={`news/${_id}`}>Read More</Link></h2>
           
           <div className="card-actions justify-end">
             <h2 className="flex items-center gap-x-3 bg-slate-400 p-1 rounded-md text-white text-left"><SlCalender />  {pickDate.format("MMMM D ,YYYY")}</h2>
